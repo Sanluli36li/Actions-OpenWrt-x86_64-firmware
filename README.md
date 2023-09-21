@@ -1,44 +1,20 @@
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+这个库用于自动编译[自用AiO服务器](https://36li.icu/%e5%9f%ba%e4%ba%8ed1581%e7%9a%84%e5%9e%83%e5%9c%be%e4%bd%acallinone%e6%9c%8d%e5%8a%a1%e5%99%a8/)的x86_64 OpenWrt固件  
+  
 
-# Actions-OpenWrt
+参考: https://ahaly.cc:86/archives/openwrt-make  
+[OpenWrt自动编译](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
+注: 根目录大小调整为1G，请注意分配空间
 
-A template for building OpenWrt with GitHub Actions
+### 额外包的列表
+Package | 描述 | URL
+-|-|-
+`ethtool-full`          | |
+`kmod-bnx2x`            | QLogic BCM5771x/578xx 驱动 | 
+`luci-app-ddns`		    | 动态DNS | 
+`openssh-sftp-server`   | SFTP服务 | 
+`luci-app-argon-config` | Argon主题配置 | https://github.com/jerrykuku/luci-app-argon-config/
+`luci-theme-argon`      | Argon主题 | https://github.com/jerrykuku/luci-theme-argon
 
-## Usage
-
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository.
-- Select `Build OpenWrt` on the Actions page.
-- Click the `Run workflow` button.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
-
-## Tips
-
-- It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
-- Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
-
-## Credits
-
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
-- [tmate](https://github.com/tmate-io/tmate)
-- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
-- [csexton/debugger-action](https://github.com/csexton/debugger-action)
-- [Cowtransfer](https://cowtransfer.com)
-- [WeTransfer](https://wetransfer.com/)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
-- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
-
-## License
-
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
+### Patch
+`993-bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch` bnx2x 2.5G补丁 由于我没找到原始来源，所以是直接从[LEDE](https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/x86/patches-5.10/993-bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch)抓过来的  
