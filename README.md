@@ -4,17 +4,23 @@
 参考: https://ahaly.cc:86/archives/openwrt-make  
 [OpenWrt自动编译](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
-注: 根目录大小调整为1G，请注意分配空间
-
+**注意:**  
+根目录大小调整为1G，请注意分配空间  
+由于分配了1G空间，所以`.img`文件特别大，升级时请直接上传`.img.gz`文件
 ### 额外包的列表
 Package | 描述 | URL
 -|-|-
+`dnsmasq-full`          | | 
 `ethtool-full`          | |
 `kmod-bnx2x`            | QLogic BCM5771x/578xx 驱动 | 
 `luci-app-ddns`		    | 动态DNS | 
+`luci-app-upnp`         | uPnP服务 | 
+`luci-compat`           | 兼容组件 |
 `openssh-sftp-server`   | SFTP服务 | 
-`luci-app-argon-config` | Argon主题配置 | https://github.com/jerrykuku/luci-app-argon-config/
-`luci-theme-argon`      | Argon主题 | https://github.com/jerrykuku/luci-theme-argon
+**来自非官方源** | | 
+`luci-app-argon-config` | Argon主题配置 | [Github](https://github.com/jerrykuku/luci-app-argon-config/)
+`luci-app-*********`    | ? | 
+`luci-theme-argon`      | Argon主题 | [Github](https://github.com/jerrykuku/luci-theme-argon)
 
 ### Patch
-`993-bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch` bnx2x 2.5G补丁 由于我没找到原始来源，所以是直接从[LEDE](https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/x86/patches-5.10/993-bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch)抓过来的  
+`993-bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch` bnx2x 2.5G补丁 没找到原始来源，直接从[LEDE](https://github.com/coolsnowwolf/lede/blob/master/target/linux/x86/patches-5.15/993-bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch)抓  
