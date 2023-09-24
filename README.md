@@ -1,12 +1,11 @@
-这个库用于自动编译[自用AiO服务器](https://36li.icu/%e5%9f%ba%e4%ba%8ed1581%e7%9a%84%e5%9e%83%e5%9c%be%e4%bd%acallinone%e6%9c%8d%e5%8a%a1%e5%99%a8/)的x86_64 OpenWrt固件  
+这个库用于自动编译[自用AiO服务器](https://36li.icu/%e5%9f%ba%e4%ba%8ed1581%e7%9a%84%e5%9e%83%e5%9c%be%e4%bd%acallinone%e6%9c%8d%e5%8a%a1%e5%99%a8/)的x86_64 [OpenWrt](https://github.com/openwrt/openwrt)固件  
   
-
-参考: https://ahaly.cc:86/archives/openwrt-make  
 [OpenWrt自动编译](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
-
+  
 **注意:**  
 根目录大小调整为1G，请注意分配空间  
-由于分配了1G空间，所以`.img`文件特别大，升级时请直接上传`.img.gz`文件
+由于分配了1G空间，所以`.img`文件特别大，升级时请直接上传`.img.gz`文件  
+
 ### 额外包的列表
 Package | 描述 | URL
 -|-|-
