@@ -13,10 +13,12 @@ Package | 描述 | URL
 `ethtool-full`          | |
 `kmod-bnx2x`            | QLogic BCM5771x/578xx 驱动 | 
 `luci-app-ddns`		    | 动态DNS | 
+`luci-app-smartdns`     | DNS服务 | 
 `luci-app-upnp`         | uPnP服务 | 
 `luci-compat`           | 兼容组件 |
 `openssh-sftp-server`   | SFTP服务 | 
 **来自非官方源** | | 
+`luci-app-adguardhome`  | 广告拦截服务 | [Github](https://github.com/rufengsuixing/luci-app-adguardhome)
 `luci-app-argon-config` | Argon主题配置 | [Github](https://github.com/jerrykuku/luci-app-argon-config/)
 `luci-app-*********`    | ? | 
 `luci-theme-argon`      | Argon主题 | [Github](https://github.com/jerrykuku/luci-theme-argon)
