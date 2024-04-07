@@ -18,8 +18,8 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome --depth=1
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon --depth=1
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config --depth=1
-git clone https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns --depth=1
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome --depth=1
+# git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon --depth=1
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config --depth=1
+# git clone https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns --depth=1
 git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash --depth=1
